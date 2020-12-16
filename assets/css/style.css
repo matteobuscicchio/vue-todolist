@@ -10,7 +10,23 @@ body{
 	background-color: #640a64;
 	color: black;
 }
+#app{
+	margin-top: 20px;
+	text-align: center;
+}
 
-li, li > i {
- color: white;
+#btn{
+	border-radius: 50%;
+	padding: 5px 15px;
+}
+
+#itemBox{
+	background-color: white;
+	width:auto;
+}
+ul{
+	list-style-type: none;
+}
+p{
+	padding: 1px 10px;
 }

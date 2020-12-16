@@ -12,9 +12,6 @@
 		<!-- FONTAWESOME -->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
-		<!-- BOOTSTRAP -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-
 		<!-- AGGIUNGERE I/IL PERCORSO/I DI CSS -->
 		<link rel="stylesheet" href="assets/css/style.css">
 		<link rel="stylesheet" href="assets/css/12-bool.css">
@@ -24,27 +21,30 @@
 	<body>
 		<!-- MAIN -->
 		<main>
-			<div id="app">
+			<div class="container">
 
-				<div class="container">
+				<div id="app">
 
 					<div id="insertItem"> <!-- DA QUI L'UTENTE ANDRà AD INSERIRE I NUOVI TO-DO -->
 
 						<div id="itemAdd"></div>
 
+						<div class="row" id="newItem">
 
-						<div id="submit">
-							<button @click="sbmtBtn">INSERISCI</button>
+							<textarea name="new_item" cols="50" rows="2"></textarea>
+							<button id="btn" @click="addBtn">Add</button>
 						</div>
 					</div>
 
 					<div id="itemBox"> <!-- DA QUI L'UTENTE POTRà VEDERE L'ELENCO DEI TO-DO -->
-
+						<h2>TO-DO LIST</h2>
 						<ul>
 							<li v-for="(item, i) in item">
+								<input class="p" type="checkbox">
 								{{item}}
 								<!-- CLICCANDO QUI L'TENTE POTRà RIMUOVERE I TO-DO NON PIù NECESSARI -->
-								<i id="deleteItem" class="fas fa-times" :class="(i === index) ? 'active' : '' "></i></li>
+								<i id="delete_item" @click="deleteItem" class="fas fa-times p"></i>
+							</li>
 						</ul>
 					</div>
 				</div>

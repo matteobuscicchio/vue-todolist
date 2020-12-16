@@ -26,7 +26,7 @@ let app = new Vue({
     },
 
     methods: {
-        sbmtBtn: function () {
+        addBtn: function () {
             //questa funzione deve prendere l'item dell'utente per inserirlo nell'array
         },
 
