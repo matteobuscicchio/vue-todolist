@@ -19,16 +19,6 @@
 	</head>
 
 	<body>
-
-		<!-- HEADER -->
-		<header>
-
-			<!-- NAV -->
-			<nav></nav>
-		
-		</header>
-
-
 		<!-- MAIN -->
 		<main>
 			<div id="app">
@@ -36,9 +26,20 @@
 				<div class="container">
 
 					<div id="insertItem"> <!-- DA QUI L'UTENTE ANDRà AD INSERIRE I NUOVI TO-DO -->
+
+						<div id="itemAdd"></div>
+
+
+						<div id="submit">
+							<button @click="sbmtBtn">INSERISCI</button>
+						</div>
 					</div>
 
-					<div id="itemBox"> <!-- DA QUI L'UTENTE POTRà RIMUOVERE I TO-DO NON PIù NECESSARI -->
+					<div id="itemBox"> <!-- DA QUI L'UTENTE POTRà VEDERE L'ELENCO DEI TO-DO -->
+
+						<ul>
+							<li v-for="(item, i) in item">{{item}}</li>
+						</ul>
 					</div>
 
 					<div id="deleteItem"> <!-- CLICCANDO QUI L'TENTE POTRà RIMUOVERE I TO-DO NON PIù NECESSARI -->
@@ -46,10 +47,6 @@
 				</div>
 			</div>
 		</main>
-
-
-		<!-- FOOTER -->
-		<footer></footer>
 
 		<!-- Vue-JS -->
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>

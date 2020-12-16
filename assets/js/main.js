@@ -14,3 +14,24 @@
 // Da tenere a mente:
 // Ricordate di scrivere le istruzioni prima di iniziare a lavorare 
 // cercate di descrivere in modo sintetico gli step che pensate siano necessari
+
+
+let app = new Vue({
+
+    el: '#app',
+
+    data: {
+        index: 0,
+        item: ["oggetto uno", "oggetto due ", "ogetto tre"], //
+    },
+
+    methods: {
+        sbmtBtn: function () {
+            //questa funzione deve prendere l'item dell'utente per inserirlo nell'array
+        },
+
+        deleteItem: function () {
+            //questa funzione deve eliminare l'item selezionato dell'utente dall'array
+        }
+    }
+});
