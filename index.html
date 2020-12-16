@@ -9,6 +9,9 @@
 
 		<title>vue-todolist</title>
 
+		<!-- FONTAWESOME -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
 		<!-- BOOTSTRAP -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
@@ -38,11 +41,11 @@
 					<div id="itemBox"> <!-- DA QUI L'UTENTE POTRà VEDERE L'ELENCO DEI TO-DO -->
 
 						<ul>
-							<li v-for="(item, i) in item">{{item}}</li>
+							<li v-for="(item, i) in item">
+								{{item}}
+								<!-- CLICCANDO QUI L'TENTE POTRà RIMUOVERE I TO-DO NON PIù NECESSARI -->
+								<i id="deleteItem" class="fas fa-times" :class="(i === index) ? 'active' : '' "></i></li>
 						</ul>
-					</div>
-
-					<div id="deleteItem"> <!-- CLICCANDO QUI L'TENTE POTRà RIMUOVERE I TO-DO NON PIù NECESSARI -->
 					</div>
 				</div>
 			</div>

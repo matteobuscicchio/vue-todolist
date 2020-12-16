@@ -22,7 +22,7 @@ let app = new Vue({
 
     data: {
         index: 0,
-        item: ["oggetto uno", "oggetto due ", "ogetto tre"], //
+        item: ["oggetto uno", "oggetto due ", "oggetto tre"], //
     },
 
     methods: {
