@@ -31,13 +31,13 @@
 
 						<div class="row" id="newItem">
 
-							<textarea name="new_item" cols="50" rows="2"></textarea>
+							<input id="userItem" name="new_item" size="50" placeholder="Inserisci qui le tue task del giorno">
 							<button id="btn" @click="addBtn">Add</button>
 						</div>
 					</div>
 
+					<h2>TO-DO LIST</h2>
 					<div id="itemBox"> <!-- DA QUI L'UTENTE POTRà VEDERE L'ELENCO DEI TO-DO -->
-						<h2>TO-DO LIST</h2>
 						<ul>
 							<li v-for="(item, i) in item">
 								<input class="p" type="checkbox">

@@ -10,6 +10,9 @@ body{
 	background-color: #640a64;
 	color: black;
 }
+h2{
+	color: white;
+}
 #app{
 	margin-top: 20px;
 	text-align: center;

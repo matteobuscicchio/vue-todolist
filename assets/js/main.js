@@ -22,12 +22,21 @@ let app = new Vue({
 
     data: {
         index: 0,
-        item: ["oggetto uno", "oggetto due ", "oggetto tre"], //
+        //array di riferimento to-do list da stampare
+        item: [],
     },
 
     methods: {
-        addBtn: function () {
+        addBtn() {
+            // va aggiunto un check sulla lunghezza dei caratteri
+
             //questa funzione deve prendere l'item dell'utente per inserirlo nell'array
+            let userInput = document.getElementById('userItem');
+            let user = userInput.value;
+            console.log(user);
+            this.item.push(user);
+            console.log(this.item);
+            userInput.value = "";
         },
 
         deleteItem: function () {
