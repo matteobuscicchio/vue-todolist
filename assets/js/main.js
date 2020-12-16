@@ -23,7 +23,7 @@ let app = new Vue({
     data: {
         index: 0,
         //array di riferimento to-do list da stampare
-        item: [],
+        item: [1, 2, 3, 4, 5, 6, 7, 8, 9],
     },
 
     methods: {
@@ -39,7 +39,7 @@ let app = new Vue({
             userInput.value = "";
         },
 
-        deleteItem: function () {
+        deleteItem() {
             //questa funzione deve eliminare l'item selezionato dell'utente dall'array
         }
     }
