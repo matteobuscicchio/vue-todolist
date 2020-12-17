@@ -31,13 +31,13 @@ let app = new Vue({
             // va aggiunto un check sulla lunghezza dei caratteri
 
             //questa funzione deve prendere l'item dell'utente per inserirlo nell'array
-            let userInput = document.getElementById('userItem').value;
-            console.log(userInput);
-            if (userInput.length > 5) {
-                this.item.push(userInput);
-                console.log(this.item);
-                userInput.value = " ";
+            let userInput = document.getElementById('userItem');
+            user = userInput.value;
+            if (user.length > 5) {
+                this.item.push(user);
             }
+            console.log(userInput.value);
+            userInput.value = "";
         },
 
         deleteItem() {
