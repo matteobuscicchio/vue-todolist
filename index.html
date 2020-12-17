@@ -19,46 +19,65 @@
 	</head>
 
 	<body>
+
 		<!-- MAIN -->
 		<main>
+
 			<div class="container">
 
+				<!-- QUI è RACCHIUSA L'APP TO-DO -->
 				<div id="app">
 
-					<div id="insertItem"> <!-- DA QUI L'UTENTE ANDRà AD INSERIRE I NUOVI TO-DO -->
+					<!-- DA QUI L'UTENTE ANDRà AD INSERIRE I NUOVI TO-DO -->
+					<div id="insertItem">
 
 						<div id="itemAdd"></div>
 
 						<div class="row" id="newItem">
 
-							<input id="userItem" v-model='newUserText' v-on:keyup.enter="addBtn()" name="new_item" size="50" placeholder="Inserisci qui le tue task del giorno">
-							<button id="btn" @click="addBtn()">Add</button>
+							<input id="userItem" v-model='newUserText' v-on:keyup.enter="addTask()" name="new_item" size="50" placeholder="Inserisci qui le tue task del giorno">
+							
+							<button id="btn" @click="addTask()">Add</button>
 						</div>
 					</div>
 
+					<!-- DA QUI L'UTENTE POTRà VEDERE L'ELENCO DEI TO-DO -->
 					<h2>TO-DO LIST</h2>
-					<div class="itemBox"> <!-- DA QUI L'UTENTE POTRà VEDERE L'ELENCO DEI TO-DO -->
+					<div class="itemBox">
+
 						<ul>
+
 							<li v-for="(item, i) in item">
+
 								<!-- CLICCANDO QUI L'UTENTE POTRà SPOSTARE LE TASK NELL'ELENCO DELLE COMPLETATE -->
 								<i class="fas fa-check" class="p" @click="taskDone(i)"></i>
+
 								<!-- QUESTA è LA STAMPA DEL SINGOLO ITEM UTENTE -->
 								{{item}}
+
 								<!-- CLICCANDO QUI L'TENTE POTRà RIMUOVERE I TO-DO NON PIù NECESSARI -->
-								<i  class="fas fa-times p" id="deleteUserItem" @click="deleteItem(i)"></i>
+								<i  class="fas fa-times padding_1_10" id="deleteUserItem" @click="deleteTask(i)"></i>
 							</li>
+
 							<!-- QUESTO MESSAGGIO VERRà MOSTRATO QUANDO LA LISTA è VUOTA -->
 							<li v-show="item.length < 1">Nulla da fare</li>
 						</ul>
 					</div>
 
 					<!-- BONUS -->
+					<!-- DA QUI L'UTENTE POTRà VEDERE L'ELENCO DEI TO-DO COMPLETATI -->
 					<h2>DONE LIST</h2>
-					<div class="itemBox"> <!-- DA QUI L'UTENTE POTRà VEDERE L'ELENCO DEI TO-DO -->
+					<div class="itemBox">
+
 						<ul>
+
+							<!-- QUESTA è LA STAMPA DEL SINGOLO ITEM UTENTE COMPLETATO -->
 							<li v-for="(doneItem, i) in doneItem">
 								{{doneItem}}
+								<!-- CLICCANDO QUI L'TENTE POTRà RIMUOVERE I TO-DO NON PIù NECESSARI -->
+								<i  class="fas fa-times padding_1_10" @click="deleteDoneTask(i)"></i>
 							</li>
+
 							<!-- QUESTO MESSAGGIO VERRà MOSTRATO QUANDO LA LISTA è VUOTA -->
 							<li v-show="doneItem.length < 1">Non hai ancora svolto task oggi</li>
 						</ul>
@@ -72,7 +91,6 @@
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 		<!-- JS -->
 		<script type="text/javascript" src="./assets/js/main.js"></script>
-
 	</body>
 
 </html>

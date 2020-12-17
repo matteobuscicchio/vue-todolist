@@ -30,6 +30,6 @@ h2{
 ul{
 	list-style-type: none;
 }
-p{
+.padding_1_10{
 	padding: 1px 10px;
 }
