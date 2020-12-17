@@ -23,25 +23,22 @@ let app = new Vue({
     data: {
         index: 0,
         //array di riferimento to-do list da stampare
-        item: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        item: [1, 2, 3, 4, 5, 6, 7, 8, 9], //questi numeri andranno cancellati dopo il completamento
     },
 
     methods: {
         addBtn() {
-            // va aggiunto un check sulla lunghezza dei caratteri
-
             //questa funzione deve prendere l'item dell'utente per inserirlo nell'array
             let userInput = document.getElementById('userItem');
             user = userInput.value;
             if (user.length > 5) {
                 this.item.push(user);
+                userInput.value = "";
             }
-            console.log(userInput.value);
-            userInput.value = "";
-        },
 
-        deleteItem() {
-            //questa funzione deve eliminare l'item selezionato dell'utente dall'array
-        }
+        },
+        deleteItem(a){
+            this.item.splice(a,1);
+        },
     }
 });
