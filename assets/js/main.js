@@ -21,9 +21,9 @@ let app = new Vue({
     el: '#app',
 
     data: {
-        index: 0,
         //array di riferimento to-do list da stampare
-        item: [1, 2, 3, 4, 5, 6, 7, 8, 9], //questi numeri andranno cancellati dopo il completamento
+        //item: [1, 2, 3, 4, 5, 6, 7, 8, 9], //questi numeri andranno cancellati dopo il completamento
+        item: [], //test messaggio lista vuota
     },
 
     methods: {

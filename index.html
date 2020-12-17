@@ -45,6 +45,8 @@
 								<!-- CLICCANDO QUI L'TENTE POTRà RIMUOVERE I TO-DO NON PIù NECESSARI -->
 								<i id="deleteUserItem" @click="deleteItem(i)" class="fas fa-times p"></i>
 							</li>
+							<!-- QUESTO MESSAGGIO VERRà MOSTRAT QUANDO LA LISTA è VUOTA -->
+							<li v-show="item.length < 1">Nulla da fare</li>
 						</ul>
 					</div>
 				</div>
