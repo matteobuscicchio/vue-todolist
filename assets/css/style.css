@@ -23,7 +23,7 @@ h2{
 	padding: 5px 15px;
 }
 
-#itemBox{
+.itemBox{
 	background-color: white;
 	width:auto;
 }
